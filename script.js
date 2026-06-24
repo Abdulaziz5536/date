@@ -80,8 +80,8 @@ function showTeaseMessage(msg) {
 function handleNoClick() {
 
        enableRunaway();
-       runawayEnabled = true;
-});
+      
+};
     
 }
 
