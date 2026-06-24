@@ -79,7 +79,7 @@ function showTeaseMessage(msg) {
 
 function handleNoClick() {
 
-       runAway();
+       enableRunaway();
 });
     
 }
