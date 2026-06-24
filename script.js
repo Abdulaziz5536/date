@@ -83,7 +83,7 @@ function handleNoClick() {
       
 };
     
-}
+
 
 function swapGif(src) {
     catGif.style.opacity = '0'
