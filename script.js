@@ -79,8 +79,7 @@ function showTeaseMessage(msg) {
 
 function handleNoClick() {
 
-       window.addEventListener('load', () => {
-        enableRunaway();
+       runAway();
 });
     
 }
