@@ -92,7 +92,7 @@ function enableRunaway() {
         }
     });
 
-    noBtn.addEventListener('mousemove', runAway, { passive: true });
+    noBtn.addEventListener('touchstart', runAway, { passive: true });
 }
 
 // Start immediately
