@@ -97,6 +97,6 @@ function enableRunaway() {
 
 // Start immediately
 window.addEventListener('load', () => {
-    runAway();      // move instantly
+         // move instantly
     enableRunaway();
 });
