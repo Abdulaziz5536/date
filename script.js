@@ -56,14 +56,12 @@ function showTeaseMessage(msg) {
 }
 
 // Move No button to a random place
-function runAway() {
-    if (noBtn.style.position !== 'fixed') {
-        const rect = noBtn.getBoundingClientRect();
+let isMoving = false;
 
-        noBtn.style.position = 'fixed';
-        noBtn.style.left = `${rect.left}px`;
-        noBtn.style.top = `${rect.top}px`;
-    }
+function runAway() {
+    if (isMoving) return;
+
+    isMoving = true;
 
     const margin = 20;
 
@@ -73,8 +71,17 @@ function runAway() {
     const maxX = window.innerWidth - btnW - margin;
     const maxY = window.innerHeight - btnH - margin;
 
-    noBtn.style.left = `${Math.random() * maxX}px`;
-    noBtn.style.top = `${Math.random() * maxY}px`;
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    noBtn.style.position = 'fixed';
+    noBtn.style.left = `${randomX}px`;
+    noBtn.style.top = `${randomY}px`;
+    noBtn.style.zIndex = '100';
+
+    setTimeout(() => {
+        isMoving = false;
+    }, 300); // adjust speed here
 }
 
 // Make button flee when cursor gets close
