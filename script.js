@@ -95,8 +95,12 @@ function enableRunaway() {
     noBtn.addEventListener('touchstart', runAway, { passive: true });
 }
 
-// Start immediately
 window.addEventListener('load', () => {
-         // move instantly
+    const rect = noBtn.getBoundingClientRect();
+
+    noBtn.style.position = 'fixed';
+    noBtn.style.left = `${rect.left}px`;
+    noBtn.style.top = `${rect.top}px`;
+
     enableRunaway();
 });
